@@ -1,0 +1,91 @@
+@font-face {
+    font-family: Oswald;
+    src: url(Repo/Font/Oswald/Oswald-VariableFont_wght.ttf);
+  }
+body, html{
+    margin:0px;
+    background-image: url(Repo/Img/Bookshelf.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: Oswald;
+}
+button{
+    background-color:goldenrod;
+    border: none;
+    width: 100px;
+    height: 50px;
+    font-family: Oswald;
+    border-radius: 40px;
+}
+button:active{
+    background-color:rgb(172, 127, 13);
+}
+#main-container{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+}
+#add-book{
+    position: absolute;
+    left: 100px;
+}
+#header{
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    color: goldenrod;
+    text-shadow: 3px 3px 2px brown;
+    font-size: 4rem;
+    background-color: rgb(60, 11, 10,0.7);
+}
+#book-container{
+    display: grid;
+    grid-template-rows: repeat(3,30vh);
+    grid-template-columns: repeat(auto-fit,10vw);
+    column-gap: 50px;
+}
+.pop-up{
+    position: absolute;
+    left: 40%;
+    top: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color:brown;
+    width: 300px;
+    height: 200px;
+    opacity: 0.9;
+    visibility: hidden;
+}
+.close-popup{
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    right: -120px;
+    top: 10px;
+}
+#details-popup{
+    visibility: visible;
+}
+#details-popup button{
+    margin : 5px;
+    
+}
+#popup-isRead-button{
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    border:none;
+}
+.read-green{
+    background: green url(Repo/Icons/check.svg);
+}
+.unread-red{
+    background: red url(Repo/Icons/close.svg);
+}
+
